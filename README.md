@@ -9,6 +9,7 @@ v run main.v
 ```
 brew install wrk
 ```
+Program main use one cpu 99.9% when under max load.
 
 ```
 wrk -t1 -c1 -d5 --latency http://127.0.0.1:8088
