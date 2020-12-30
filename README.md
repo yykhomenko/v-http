@@ -9,7 +9,7 @@ v run main.v
 ```
 brew install wrk
 ```
-Program main use one cpu 99.9%, 5.05 CPU time(5s test), 772KB RAM when under max load.
+Program main use one cpu 99.9%, 5.05 CPU time(5s test), 1MB RAM when under max load.
 
 ```
 wrk -t1 -c1 -d5 --latency http://127.0.0.1
