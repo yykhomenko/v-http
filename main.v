@@ -7,8 +7,8 @@ fn hello_response() string {
 }
 
 fn callback(req picohttpparser.Request, mut res picohttpparser.Response) {
+	res.http_ok()	
 	res.header_date()
-	res.http_ok()
 	res.plain()
 	res.body(hello_response())
 }
