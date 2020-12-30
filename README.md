@@ -12,8 +12,8 @@ brew install wrk
 Program main use one cpu 99.9%, 5.05 CPU time(5s test), 772KB RAM when under max load.
 
 ```
-wrk -t1 -c1 -d5 --latency http://127.0.0.1:8088
-Running 5s test @ http://127.0.0.1:8088
+wrk -t1 -c1 -d5 --latency http://127.0.0.1
+Running 5s test @ http://127.0.0.1
   1 threads and 1 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
     Latency    28.58us   11.13us 492.00us   94.47%
@@ -28,8 +28,8 @@ Requests/sec:  33390.05
 Transfer/sec:      3.66MB
 ```
 ```
-wrk -t2 -c32 -d5 --latency http://127.0.0.1:8088
-Running 5s test @ http://127.0.0.1:8088
+wrk -t2 -c32 -d5 --latency http://127.0.0.1
+Running 5s test @ http://127.0.0.1
   2 threads and 32 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
     Latency   233.82us   72.99us   1.16ms   78.94%
