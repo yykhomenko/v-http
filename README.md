@@ -32,15 +32,16 @@ wrk -t2 -c32 -d5 --latency http://127.0.0.1
 Running 5s test @ http://127.0.0.1
   2 threads and 32 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   233.82us   72.99us   1.16ms   78.94%
-    Req/Sec    64.91k     1.96k   69.43k    69.61%
+    Latency   231.75us   73.51us   0.94ms   79.61%
+    Req/Sec    65.70k     2.52k   71.49k    63.00%
   Latency Distribution
-     50%  214.00us
-     75%  250.00us
-     90%  341.00us
-     99%  470.00us
-  658699 requests in 5.10s, 72.24MB read
-Requests/sec: 129140.36
+     50%  208.00us
+     75%  245.00us
+     90%  347.00us
+     99%  468.00us
+  653038 requests in 5.00s, 71.62MB read
+Requests/sec: 130594.93
+Transfer/sec:     14.32MB
 ```
 ```
 Model Name:	MacBook Pro
