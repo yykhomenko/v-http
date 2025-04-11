@@ -1,13 +1,15 @@
 import picoev
 import picohttpparser
 
-fn callback(req picohttpparser.Request, mut res picohttpparser.Response) {
-	res.http_ok()	
+fn callback(data voidptr, req picohttpparser.Request, mut res picohttpparser.Response) {
+	res.http_ok()
 	res.header_date()
 	res.plain()
 	res.body('Hello, World!')
+	res.end()
 }
 
 fn main() {
-	picoev.new(80, &callback).serve()
+	mut server := picoev.new(port: 8080, cb: callback) or { panic('!!!') }
+	server.serve()
 }
